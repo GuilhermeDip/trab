@@ -1,15 +1,47 @@
 <?php 
-	include 'cliente.class.php';
 
-	$p = new Cliente();
-	$p->setidCliente("id10");
-	$p->setNome("Guilherme");
-	$p->setEmail("guilhermedip@hotmail.com");
-	$p->setRenda("1000 Reais");
+	class Cliente{
+	
+	private $idCliente;
+	private $nome;
+	private $email;
+	private $renda;
 
-	echo "<p>Id Cliente: ".$p->getidCliente().
-		"<br>Nome: ".$p->getNome().
-		"<br>Email: ".$p->getEmail().
-		"<br>Renda: ".$p->getRenda(). "</p>"
+	public function cliente(){
+	}
 
- ?>
+	public function getidCliente(){
+		return $this->idCliente;
+	}
+
+	public function setidCliente($idCliente){
+		$this->idCliente = $idCliente;
+	}
+
+	public function getNome(){
+		return $this->nome;
+	}
+
+	public function setNome($nome){
+		$this->nome = $nome;
+	}
+
+	public function getEmail(){
+		return $this->email;
+	}
+
+	public function setEmail($email){
+		$this->email = $email;
+	}
+
+	public function getRenda(){
+		return $this->renda;
+	}
+
+	public function setRenda($renda){
+		$this->renda = $renda;
+	}
+
+}
+
+?>
